@@ -40,6 +40,8 @@ source ~/.bashrc
 
 conda update conda -y
 
+rm /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+
 echo -e "${GREEN}Finished installing Anaconda 3${WHITE}"
 
 

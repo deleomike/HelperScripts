@@ -2,6 +2,8 @@
 
 Hello, this is a repository of scripts I use to automate my life when I inevitably mess up my personal computer. Running helper.sh installs all of the good stuff that I use for my personal development stuff.
 
+My motivation for this. I break things a lot, and so these scripts are intended to be the easiest way for me to keep breaking things and be efficient about it.
+
 What is covered
 
 - Pycharm Community Classic

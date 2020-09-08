@@ -19,10 +19,13 @@ sudo apt update -y
 
 sudo apt install -y steam
 
+DIR_PATH=pwd
+
 #Conda
 bash ./scripts/installConda.sh
 
 #Unity
+bash ./scripts/installUnity.sh
 
 #Cuda 10.2
 bash ./scripts/installCuda102.sh
