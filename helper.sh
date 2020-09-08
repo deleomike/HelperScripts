@@ -6,6 +6,8 @@ WHITE='\033[1;37m'
 
 echo -e "${GREEN}Helper Script: ^_^ Hello World!${WHITE}"
 
+sudo apt-get install ca-certificates -y
+
 sudo apt-get update -y
 
 sudo snap install -y pycharm-community --classic
