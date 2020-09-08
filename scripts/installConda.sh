@@ -36,7 +36,7 @@ source ~/.bashrc
 
 conda update conda -y
 
-echo -e "${GREEN}Finished installing Anaconda 3"
+echo -e "${GREEN}Finished installing Anaconda 3${WHITE}"
 
 
 
