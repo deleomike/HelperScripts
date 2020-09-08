@@ -32,4 +32,11 @@ chmod +x /tmp/Anaconda3-2020.02-Linux-x86_64.sh
 
 ./setupConda.exp
 
+source ~/.bashrc
+
+conda update conda -y
+
+echo -e "${GREEN}Finished installing Anaconda 3"
+
+
 
