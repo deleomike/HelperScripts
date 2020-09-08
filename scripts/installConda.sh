@@ -30,7 +30,7 @@ sha256sum /tmp/Anaconda3-2020.02-Linux-x86_64.sh > /tmp/condaChecksum.txt
 
 chmod +x /tmp/Anaconda3-2020.02-Linux-x86_64.sh
 
-./setupConda.exp
+./scripts/setupConda.exp
 
 source ~/.bashrc
 
