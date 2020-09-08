@@ -12,7 +12,7 @@ if {$force_conservative} {
 
 set timeout 1
 
-spawn /tmp/Anaconda3-2020.02-Linux-x86_64.sh
+spawn /tmp/Anaconda3-2020.02-Linux-x86_64.sh -u
 
 match_max 100000
 
@@ -37,9 +37,17 @@ expect {
 	default { puts "\n"; send -- "\n\r" }
 }
 
+set timeout -1
+
 expect "*>" {send -- "\r";}
 
-expect "ERROR" {puts "CONDA IS ALREADY INSTALLED"}
+expect {
+	"\[no\] >>>" {send -- "yes\r"}
+	"ERROR" {puts "CONDA IS ALREADY INSTALLED"}
+	default {send  -- "yes\r"}
+}
 
-expect "*>" {send -- "yes\r";}
+expect " hello"
+
+send -- "\n"
 
