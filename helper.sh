@@ -27,5 +27,8 @@ bash ./scripts/installConda.sh
 #Unity
 bash ./scripts/installUnity.sh
 
+#SoapSDR
+bash ./scripts/installSoapy.sh
+
 #Cuda 10.2
 bash ./scripts/installCuda102.sh
