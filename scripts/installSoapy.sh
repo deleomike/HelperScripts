@@ -98,6 +98,9 @@ SoapySDRUtil --info
 #Python Bindings
 sudo apt-get install -y python-dev swig
 
+#Install Tools
+sudo apt-get install -y soapysdr-tools
+
 echo -e "${HEADER}Finished installing SoapySDR${WHITE}"
 
 
