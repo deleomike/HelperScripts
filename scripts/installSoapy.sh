@@ -17,6 +17,9 @@ WHITE='\033[1;37m'
 
 echo -e "\n\n${HEADER}Installing SoapySDR${WHITE}\n\n"
 
+#Python Bindings
+sudo apt-get install -y python-dev swig
+
 #core framework and toolkits (required)
 echo -e "\n\n${ITEM}core framework and toolkits (required)${WHITE}\n\n"
 sudo add-apt-repository -y ppa:pothosware/framework
@@ -94,9 +97,6 @@ sudo apt-get install -y airspy soapysdr-module-airspy
 #print information about the install
 PothosUtil --system-info
 SoapySDRUtil --info
-
-#Python Bindings
-sudo apt-get install -y python-dev swig
 
 #Install Tools
 sudo apt-get install -y soapysdr-tools
