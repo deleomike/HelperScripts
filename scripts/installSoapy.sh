@@ -7,6 +7,8 @@
 ## Email: michaeldeleo31@yahoo.com	 ##
 ##########################################
 
+#SOURCE : https://github.com/pothosware/PothosCore/wiki/Ubuntu
+
 #For Ubuntu 20.04
 
 HEADER='\033[0;32m'
@@ -40,7 +42,7 @@ sudo apt-get update
 ###
 ##Installing Pothos and toolkits
 echo -e "\n\n${ITEM}Installing Pothos and toolkits${WHITE}\n\n"
-sudo apt-get install pothos-all
+sudo apt-get install -y pothos-all
 
 #install bindings for python2
 #echo -e "\n\n${ITEM}install bindings for python2${WHITE}\n\n"
@@ -48,46 +50,46 @@ sudo apt-get install pothos-all
 
 #install bindings for python3
 echo -e "\n\n${ITEM}bindings for python3${WHITE}\n\n"
-sudo apt-get install python3-pothos
+sudo apt-get install -y python3-pothos
 
 #install development files for python blocks
 echo -e "\n\n${ITEM}install development files for python blocks${WHITE}\n\n"
-sudo apt-get install pothos-python-dev
+sudo apt-get install -y pothos-python-dev
 
 ###
 #SDR Hardware packages
 
 #osmo sdr support:
 echo -e "\n\n${ITEM}osmo sdr support${WHITE}\n\n"
-sudo apt-get install osmo-sdr soapysdr-module-osmosdr
+sudo apt-get install -y osmo-sdr soapysdr-module-osmosdr
 
 #rtl sdr support:
 echo -e "\n\n${ITEM}rtl sdr support${WHITE}\n\n"
-sudo apt-get install rtl-sdr soapysdr-module-rtlsdr
+sudo apt-get install -y rtl-sdr soapysdr-module-rtlsdr
 
 #blade rf support:
 echo -e "\n\n${ITEM}blade rf support${WHITE}\n\n"
-sudo apt-get install bladerf soapysdr-module-bladerf
+sudo apt-get install -y bladerf soapysdr-module-bladerf
 
 #hack rf support:
 echo -e "\n\n${ITEM}hack rf support${WHITE}\n\n"
-sudo apt-get install hackrf soapysdr-module-hackrf
+sudo apt-get install -y hackrf soapysdr-module-hackrf
 
 #usrp support:
 echo -e "\n\n${ITEM}usrp support${WHITE}\n\n"
-sudo apt-get install uhd-host uhd-soapysdr soapysdr-module-uhd
+sudo apt-get install -y uhd-host uhd-soapysdr soapysdr-module-uhd
 
 #miri SDR support:
 echo -e "\n\n${ITEM}miri sdr support${WHITE}\n\n"
-sudo apt-get install miri-sdr soapysdr-module-mirisdr
+sudo apt-get install -y miri-sdr soapysdr-module-mirisdr
 
 #rf space support:
 echo -e "\n\n${ITEM}rf space support${WHITE}\n\n"
-sudo apt-get install soapysdr-module-rfspace
+sudo apt-get install -y soapysdr-module-rfspace
 
 #airspy support:
 echo -e "\n\n${ITEM}airspy support${WHITE}\n\n"
-sudo apt-get install airspy soapysdr-module-airspy
+sudo apt-get install -y airspy soapysdr-module-airspy
 
 #print information about the install
 PothosUtil --system-info
