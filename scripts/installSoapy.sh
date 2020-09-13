@@ -96,7 +96,7 @@ PothosUtil --system-info
 SoapySDRUtil --info
 
 #Python Bindings
-sudo apt-get install python-dev swig
+sudo apt-get install -y python-dev swig
 
 echo -e "${HEADER}Finished installing SoapySDR${WHITE}"
 
