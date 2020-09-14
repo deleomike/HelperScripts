@@ -24,6 +24,9 @@ DIR_PATH=pwd
 #Conda
 bash ./installers/conda.sh
 
+#Get the profile again
+source ~/.bashrc
+
 #SoapSDR
 bash ./builders/soapy_sdr.sh
 
