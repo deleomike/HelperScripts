@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 
 sudo apt-get install -y gcc-7 g++-7
 
-sudo apt-get install \
+sudo apt-get install -y \
     libnuma-dev cmake \
     libpython-dev python-numpy \
     qtbase5-dev libqt5svg5-dev libqt5opengl5-dev libqwt-qt5-dev \
@@ -38,7 +38,7 @@ sudo apt-get install -y libpython-dev python-dev swig
 sudo add-apt-repository -y ppa:pothosware/support
 sudo add-apt-repository -y ppa:pothosware/framework
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get install -y \
     libpoco-dev \
     libspuce-dev \
     nlohmann-json-dev \ #nlohmann-json3-dev on 20.04 lts
@@ -47,7 +47,7 @@ sudo apt-get install \
 #pre-packaged Soapy SDR development files
 sudo add-apt-repository -y ppa:myriadrf/drivers
 sudo apt-get update
-sudo apt-get install libsoapysdr-dev
+sudo apt-get install -y libsoapysdr-dev
 
 
 #Now to build it

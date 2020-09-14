@@ -16,7 +16,7 @@ echo "Kernel Version"
 uname -r
 
 echo "Choose to install these headers"
-sudo apt-get install linux-headers-$(uname -r)
+sudo apt-get install -y linux-headers-$(uname -r)
 
 sudo -s
 echo "blacklist nouveau
