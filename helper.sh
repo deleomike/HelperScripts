@@ -1,4 +1,4 @@
-#!/usr/bin
+#!/bin/sh
 
 
 GREEN='\033[0;32m'
@@ -6,32 +6,92 @@ WHITE='\033[1;37m'
 
 echo -e "${GREEN}Helper Script: ^_^ Hello World!${WHITE}"
 
-sudo apt-get install ca-certificates -y
+# Usage info
+show_help() {
+cat << EOF
+Usage: ${0##*/} [-hacbsm] ...
+Helper is a script to handle some common installations.
+ 
+	-h          display this help and exit
+	-a          install everything
+	-b          install base software
+			Pycharm-Community Classic Edition
+			Steam
+			Blender
+	-s          install SDR libraries
+	-c          install cuda 10.2 drivers, toolkit and samples
+	-m          install miscellaneous packages
+			Unreal Engine
+EOF
+}
+ 
 
-sudo apt-get update -y
+echo -e "${GREEN}Creating Build Directory at ~/Builds for built projects${WHITE}"
+mkdir ~/Builds
 
-sudo snap install pycharm-community --classic
+echo "These are system builds - HelperScript" > ~/Builds/readme.md
 
-sudo snap install blender --classic
+OPTIND=1
+# Resetting OPTIND is necessary if getopts was used previously in the script.
+# It is a good idea to make OPTIND local if you process options in a function.
 
-sudo add-apt-repository multiverse
-sudo apt update -y
+while getopts hvf: opt; do
+    case $opt in
+        h)
+		show_help
+		exit 0
+		;;
+	a)
 
-sudo apt install -y steam
+		#Baseline Software
+		bash ./installers/base.sh
 
-DIR_PATH=pwd
+		#Conda
+		bash ./installers/conda.sh
 
-#Conda
-bash ./installers/conda.sh
+		#Get the profile again
+		source ~/.bashrc
 
-#Get the profile again
-source ~/.bashrc
+		#SoapSDR
+		bash ./builders/soapy_sdr.sh
 
-#SoapSDR
-bash ./builders/soapy_sdr.sh
+		#LimeSuite
+		bash ./installers/lime_suite.sh
 
-#LimeSuite
-bash ./installers/lime_suite.sh
+		#Unreal Engine
+		bash ./builders/unreal_engine.sh
 
-#Cuda 10.2
-bash ./installers/cuda102.sh
+		#Cuda 10.2
+		bash ./installers/cuda102.sh
+
+		exit 0
+		;;
+	b)
+		#Baseline Software
+		bash ./installers/base.sh
+		;;
+	s)
+		#SoapSDR
+		bash ./builders/soapy_sdr.sh
+
+		#LimeSuite
+		bash ./installers/lime_suite.sh
+
+		;;
+	c)
+		#Cuda 10.2
+		bash ./installers/cuda102.sh
+		;;
+	m)
+		#Unreal Engine
+		bash ./builders/unreal_engine.sh
+		;;
+        *)
+            show_help >&2
+            exit 1
+            ;;
+    esac
+done
+shift "$((OPTIND-1))"   # Discard the options and sentinel --
+
+

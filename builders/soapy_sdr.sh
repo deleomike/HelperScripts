@@ -53,10 +53,9 @@ sudo apt-get install -y libsoapysdr-dev
 #Now to build it
 
 
-git clone https://github.com/pothosware/SoapySDR.git
-cd SoapySDR
+git clone https://github.com/pothosware/SoapySDR.git ~/Build/SoapySDR
+cd ~/Builds/SoapySDR
 
-cd SoapySDR
 git pull origin master
 
 mkdir build
