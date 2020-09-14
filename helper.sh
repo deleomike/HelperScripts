@@ -22,13 +22,13 @@ sudo apt install -y steam
 DIR_PATH=pwd
 
 #Conda
-bash ./scripts/installConda.sh
-
-#Unity
-bash ./scripts/installUnity.sh
+bash ./installers/conda.sh
 
 #SoapSDR
-bash ./scripts/installSoapy.sh
+bash ./builders/soapy_sdr.sh
+
+#LimeSuite
+bash ./installers/lime_suite.sh
 
 #Cuda 10.2
-bash ./scripts/installCuda102.sh
+bash ./installers/cuda102.sh
