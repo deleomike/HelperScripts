@@ -9,7 +9,7 @@ echo -e "${GREEN}Helper Script: ^_^ Hello World!${WHITE}"
 # Usage info
 show_help() {
 cat << EOF
-Usage: ${0##*/} [-hacbsm] ...
+Usage: ${0##*/} [-hacobsm] ...
 Helper is a script to handle some common installations.
  
 	-h          display this help and exit
