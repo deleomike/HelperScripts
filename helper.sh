@@ -36,7 +36,7 @@ OPTIND=1
 # Resetting OPTIND is necessary if getopts was used previously in the script.
 # It is a good idea to make OPTIND local if you process options in a function.
 
-while getopts hvf: opt; do
+while getopts hacobsm: opt; do
     case $opt in
         h)
 		show_help
@@ -83,10 +83,10 @@ while getopts hvf: opt; do
 		#Cuda 10.2
 		bash ./installers/cuda102.sh
 		;;
-	o)
-		#Anaconda
-		bash ./installers/conda.sh
-		;;
+    o)
+        #Anaconda
+        bash ./installers/conda.sh
+        ;;
 	m)
 		#Unreal Engine
 		bash ./builders/unreal_engine.sh
