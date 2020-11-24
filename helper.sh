@@ -20,7 +20,7 @@ Helper is a script to handle some common installations.
 			Blender
 	-s          install SDR libraries
 	-c          install cuda 10.2 drivers, toolkit and samples
-	-C	    install Anaconda
+	-o	    install Anaconda
 	-m          install miscellaneous packages
 			Unreal Engine
 EOF
@@ -83,7 +83,7 @@ while getopts hvf: opt; do
 		#Cuda 10.2
 		bash ./installers/cuda102.sh
 		;;
-	C)
+	o)
 		#Anaconda
 		bash ./installers/conda.sh
 		;;
